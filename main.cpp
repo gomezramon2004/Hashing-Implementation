@@ -1,15 +1,17 @@
 #include "hash/hash.hpp"
+#include "quadratic/quadratic.hpp"
+#include "chain/chain.hpp"
 
 int main() {
-    int a[] = {234789, 1523456, 242345, 111234, 271456, 813456, 1209874};
+    int a[] = {50, 700, 76, 85, 92, 73, 101};
     int n = sizeof(a)/sizeof(a[0]);
 
-    Hash h(9);
-    for (int i = 0; i < n; i++)
-        h.insertItem(a[i]);
+    Hash h(7);
 
-    h.displayHash();
-    h.deleteItem(242345);
+    for (int i=0; i < n; ++i) {
+        quadratic(h, a[i]);
+    }
+
     h.displayHash();
     return 0;
 }

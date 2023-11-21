@@ -5,11 +5,9 @@
 class Hash {
     private:
         int BUCKET;
-        std::list<int> *table;
-        int hashing(int key);
     public:
+        std::list<int> *table;
         Hash(int n);
-        void insertItem(int key);
-        void deleteItem(int key);
+        int Hashing(int key);
         void displayHash();
 };
