@@ -1,17 +1,15 @@
-// Purpose: main file for testing the graph class
-//Act 4.3 - Actividad Integral de Grafos (Evidencia Competencia)
-//Equipo:
-// - Francisco Rochin
-// - Ramón Gómez
-// - Andres Sandoval 
-// - Daniel Fernández
-#include "graph/graph.hpp"
-
+#include "hash/hash.hpp"
 
 int main() {
-    Graph graph;
+    int a[] = {234789, 1523456, 242345, 111234, 271456, 813456, 1209874};
+    int n = sizeof(a)/sizeof(a[0]);
 
-    graph.loadFromFile(graph, "case_file1.txt");
+    Hash h(9);
+    for (int i = 0; i < n; i++)
+        h.insertItem(a[i]);
 
+    h.displayHash();
+    h.deleteItem(242345);
+    h.displayHash();
     return 0;
 }
