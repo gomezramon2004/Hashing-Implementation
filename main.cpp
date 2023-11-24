@@ -1,17 +1,25 @@
 #include "hash/hash.hpp"
-#include "quadratic/quadratic.hpp"
-#include "chain/chain.hpp"
+#include "functions/functions.hpp"
 
 int main() {
-    int a[] = {50, 700, 76, 85, 92, 73, 101};
-    int n = sizeof(a)/sizeof(a[0]);
+    try {
+        int a[] = {50, 700, 76, 85, 92, 73, 101};
+        int n = sizeof(a)/sizeof(a[0]);
+        Hash h1(7);
+        Hash h2(7);
 
-    Hash h(7);
+        for (int i=0; i < n; ++i) {
+            quadratic(h1, a[i]);
+            chain(h2, a[i]);
+        }
 
-    for (int i=0; i < n; ++i) {
-        quadratic(h, a[i]);
+        h1.displayHash();
+        h2.displayHash();
+
+        quadratic(h1, 102);
+        h1.displayHash();
+    } catch (const std::runtime_error& e) {
+        std::cerr << e.what() << std::endl;
     }
-
-    h.displayHash();
     return 0;
 }

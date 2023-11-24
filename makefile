@@ -2,13 +2,12 @@ CXX = g++
 CXXFLAGS = -Wall -std=c++17
 TARGET = main
 HSHDIR = hash
-QUADIR = quadratic
+FUNDIR = functions
 CHNDIR = chain
 
 SRCS = main.cpp \
 		$(HSHDIR)/hash.cpp \
-		$(QUADIR)/quadratic.cpp \
-		$(CHNDIR)/chain.cpp \
+		$(FUNDIR)/functions.cpp \
 
 EXECUTABLE = a.out
 

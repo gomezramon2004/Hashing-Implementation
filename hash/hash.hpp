@@ -5,9 +5,13 @@
 class Hash {
     private:
         int BUCKET;
-    public:
+        int currentBucket;
         std::list<int> *table;
+    public:
         Hash(int n);
-        int Hashing(int key);
+        std::list<int>* getTable();
+        bool isFull();
+        void upgradeCurrentBucket();
+        int hashing(int key);
         void displayHash();
 };

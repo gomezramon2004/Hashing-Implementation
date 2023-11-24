@@ -3,9 +3,22 @@
 Hash::Hash(int n) {
     this->BUCKET = n;
     table = new std::list<int>[BUCKET];
+    currentBucket = 0;
 }
 
-int Hash::Hashing(int key) {
+std::list<int>* Hash::getTable() {
+    return table;
+}
+
+bool Hash::isFull() {
+    return BUCKET == currentBucket;
+}
+
+void Hash::upgradeCurrentBucket() {
+    this->currentBucket++;
+}
+
+int Hash::hashing(int key) {
     return key % BUCKET;
 }
 
