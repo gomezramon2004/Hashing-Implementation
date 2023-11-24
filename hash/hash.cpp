@@ -14,7 +14,7 @@ bool Hash::isFull() {
     return BUCKET == currentBucket;
 }
 
-void Hash::upgradeCurrentBucket() {
+void Hash::updateCurrentBucket() {
     this->currentBucket++;
 }
 

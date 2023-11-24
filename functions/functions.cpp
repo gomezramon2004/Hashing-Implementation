@@ -16,7 +16,7 @@ void quadratic(Hash& hashtable, int key) {
     }
 
     hashtable.getTable()[index].push_back(key);
-    hashtable.upgdateCurrentBucket();
+    hashtable.updateCurrentBucket();
 }
 
 void chain(Hash& hashtable, int key) {
