@@ -1,4 +1,4 @@
-#include "hash.hpp"
+#include "tabla_hash.hpp"
 
 Hash::Hash(int n) {
     this->BUCKET = n;

@@ -1,5 +1,5 @@
-#include "hash/hash.hpp"
-#include "functions/functions.hpp"
+#include "hash/tabla_hash.hpp"
+#include "functions/appHash.hpp"
 
 int main() {
     try {

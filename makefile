@@ -6,8 +6,8 @@ FUNDIR = functions
 CHNDIR = chain
 
 SRCS = main.cpp \
-		$(HSHDIR)/hash.cpp \
-		$(FUNDIR)/functions.cpp \
+		$(HSHDIR)/tabla_hash.cpp \
+		$(FUNDIR)/appHash.cpp \
 
 EXECUTABLE = a.out
 

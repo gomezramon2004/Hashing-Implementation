@@ -1,4 +1,4 @@
-#include "functions.hpp"
+#include "appHash.hpp"
 
 void quadratic(Hash& hashtable, int key) {
     int index = hashtable.hashing(key), i = 1;
