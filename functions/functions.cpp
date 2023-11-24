@@ -16,11 +16,11 @@ void quadratic(Hash& hashtable, int key) {
     }
 
     hashtable.getTable()[index].push_back(key);
-    hashtable.upgradeCurrentBucket();
+    hashtable.upgdateCurrentBucket();
 }
 
 void chain(Hash& hashtable, int key) {
     int index = hashtable.hashing(key);
     hashtable.getTable()[index].push_back(key);
-    hashtable.upgradeCurrentBucket();
+    hashtable.updateCurrentBucket();
 }

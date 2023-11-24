@@ -11,7 +11,7 @@ class Hash {
         Hash(int n);
         std::list<int>* getTable();
         bool isFull();
-        void upgradeCurrentBucket();
+        void updateCurrentBucket();
         int hashing(int key);
         void displayHash();
 };
